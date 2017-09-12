@@ -220,9 +220,13 @@
                   "});",
                   "",
                   "var jsonData = pm.response.json();",
-                  "pm.test(\"Registration User without Email Id--\"+jsonData.message, function () {",
+                  "pm.test(\"Registration User without Last Name--\"+jsonData.message, function () {",
                   "    pm.expect(jsonData.message).to.eql(\"User validation failed: lastname: Path `lastname` is required.\");",
-                  "});"
+                  "});",
+                  "",
+                  "",
+                  "",
+                  ""
                 ]
               }
             },
