@@ -359,7 +359,7 @@
         },
         {
           "_postman_id": "ed7a53da-289b-b875-c766-b2ba5a194fb6",
-          "name": "LoginFor_User copy",
+          "name": "LoginFor_ProductUser",
           "event": [
             {
               "listen": "test",
