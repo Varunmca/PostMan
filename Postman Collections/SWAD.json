@@ -613,6 +613,47 @@
           "response": []
         },
         {
+          "_postman_id": "6dc15401-bbf1-053e-6894-018481ecd3b5",
+          "name": "GetUser copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": "http://192.168.129.143:5000/api/user/{{UserID}}",
+            "method": "GET",
+            "header": [
+              {
+                "description": "",
+                "key": "Authorization",
+                "value": "{{Token_Key}}"
+              },
+              {
+                "description": "",
+                "key": "",
+                "value": "",
+                "disabled": true
+              }
+            ],
+            "body": {},
+            "description": "API is used for get user"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "7da30f3e-083a-8478-a50e-189b7bd5bf51",
           "name": "GetUser_WithoutToken",
           "event": [
@@ -681,47 +722,6 @@
             "header": [],
             "body": {},
             "description": ""
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "6dc15401-bbf1-053e-6894-018481ecd3b5",
-          "name": "GetUser copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});",
-                  "",
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": "http://192.168.129.143:5000/api/user/{{UserID}}",
-            "method": "GET",
-            "header": [
-              {
-                "description": "",
-                "key": "Authorization",
-                "value": "{{Token_Key}}"
-              },
-              {
-                "description": "",
-                "key": "",
-                "value": "",
-                "disabled": true
-              }
-            ],
-            "body": {},
-            "description": "API is used for get user"
           },
           "response": []
         }
