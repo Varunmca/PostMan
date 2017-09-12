@@ -812,14 +812,14 @@
           ],
           "request": {
             "url": {
-              "raw": "http://192.168.129.143:5000/api/user/login",
+              "raw": "http://192.168.129.155:5000/api/user/login",
               "protocol": "http",
               "auth": {},
               "host": [
                 "192",
                 "168",
                 "129",
-                "143"
+                "155"
               ],
               "port": "5000",
               "path": [
@@ -848,7 +848,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"varunsinghmca@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"product-owner\"\r\n}"
+              "raw": "{\r\n  \"userid\": \"sanjuneogi@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
