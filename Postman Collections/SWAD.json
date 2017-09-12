@@ -835,7 +835,7 @@
           "_postman_id": "53db4dd2-e16d-28e3-664e-ed5d25e030ea",
           "name": "GetAllProducts",
           "request": {
-            "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
+            "url": "http://192.168.129.143:5000/api//product",
             "method": "GET",
             "header": [
               {
