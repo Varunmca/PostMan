@@ -676,7 +676,7 @@
             }
           ],
           "request": {
-            "url": "http://192.168.129.155:5000/api/user/{{UserID}}",
+            "url": "http://192.168.129.143:5000/api/user/{{UserID}}",
             "method": "GET",
             "header": [
               {
@@ -685,8 +685,8 @@
                 "description": ""
               },
               {
-                "key": "UserID",
-                "value": "user_ids",
+                "key": "",
+                "value": "",
                 "description": "",
                 "disabled": true
               }
