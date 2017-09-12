@@ -358,6 +358,90 @@
           "response": []
         },
         {
+          "_postman_id": "ed7a53da-289b-b875-c766-b2ba5a194fb6",
+          "name": "LoginFor_User copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "var token_key=data.token",
+                  "postman.setGlobalVariable(\"Token_Key\", token_key);",
+                  "console.log(token_key);",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Firstname is Present\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"firstname\");",
+                  "});",
+                  "pm.test(\"Last name is Present\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"lastname\");",
+                  "});",
+                  "pm.test(\"User ID is Present\", function () {",
+                  "    pm.expect(pm.response.text()).to.include(\"userid\");",
+                  "});",
+                  "",
+                  "  var jsonData = pm.response.json();",
+                  "pm.test(\"UserId Should be-----\"+jsonData.user.userid, function () {",
+                  "    pm.expect(jsonData.user.userid).to.eql(jsonData.user.userid);",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json",
+                "description": ""
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
+        },
+        {
           "_postman_id": "6e8924fb-705e-53d6-0fdb-20e20275ba30",
           "name": "Login_WithoutUserId",
           "event": [
@@ -559,90 +643,6 @@
             "body": {
               "mode": "raw",
               "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
-            },
-            "description": "This API is sue for login"
-          },
-          "response": []
-        },
-        {
-          "_postman_id": "ed7a53da-289b-b875-c766-b2ba5a194fb6",
-          "name": "LoginFor_User copy",
-          "event": [
-            {
-              "listen": "test",
-              "script": {
-                "type": "text/javascript",
-                "exec": [
-                  "var data = JSON.parse(responseBody);",
-                  "var token_key=data.token",
-                  "postman.setGlobalVariable(\"Token_Key\", token_key);",
-                  "console.log(token_key);",
-                  "",
-                  "pm.test(\"Status code is 200\", function () {",
-                  "    pm.response.to.have.status(200);",
-                  "});",
-                  "",
-                  "pm.test(\"Content-Type is present\", function () {",
-                  "    pm.response.to.have.header(\"Content-Type\");",
-                  "});",
-                  "",
-                  "pm.test(\"Firstname is Present\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"firstname\");",
-                  "});",
-                  "pm.test(\"Last name is Present\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"lastname\");",
-                  "});",
-                  "pm.test(\"User ID is Present\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"userid\");",
-                  "});",
-                  "",
-                  "  var jsonData = pm.response.json();",
-                  "pm.test(\"UserId Should be-----\"+jsonData.user.userid, function () {",
-                  "    pm.expect(jsonData.user.userid).to.eql(jsonData.user.userid);",
-                  "});"
-                ]
-              }
-            }
-          ],
-          "request": {
-            "url": {
-              "raw": "http://192.168.129.143:5000/api/user/login",
-              "protocol": "http",
-              "auth": {},
-              "host": [
-                "192",
-                "168",
-                "129",
-                "143"
-              ],
-              "port": "5000",
-              "path": [
-                "api",
-                "user",
-                "login"
-              ],
-              "query": [
-                {
-                  "description": "",
-                  "equals": true,
-                  "key": "UserID",
-                  "value": "user_ids",
-                  "disabled": true
-                }
-              ],
-              "variable": []
-            },
-            "method": "POST",
-            "header": [
-              {
-                "key": "Content-Type",
-                "value": "application/json",
-                "description": ""
-              }
-            ],
-            "body": {
-              "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
