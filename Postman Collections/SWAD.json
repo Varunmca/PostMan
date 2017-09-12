@@ -332,10 +332,10 @@
               ],
               "query": [
                 {
+                  "description": "",
+                  "equals": true,
                   "key": "UserID",
                   "value": "user_ids",
-                  "equals": true,
-                  "description": "",
                   "disabled": true
                 }
               ],
