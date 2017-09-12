@@ -791,21 +791,7 @@
                   "pm.test(\"Content-Type is present\", function () {",
                   "    pm.response.to.have.header(\"Content-Type\");",
                   "});",
-                  "",
-                  "pm.test(\"Firstname is Present\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"firstname\");",
-                  "});",
-                  "pm.test(\"Last name is Present\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"lastname\");",
-                  "});",
-                  "pm.test(\"User ID is Present\", function () {",
-                  "    pm.expect(pm.response.text()).to.include(\"userid\");",
-                  "});",
-                  "",
-                  "  var jsonData = pm.response.json();",
-                  "pm.test(\"UserId Should be-----\"+jsonData.user.userid, function () {",
-                  "    pm.expect(jsonData.user.userid).to.eql(jsonData.user.userid);",
-                  "});"
+                  ""
                 ]
               }
             }
@@ -848,7 +834,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"sanjuneogi@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
+              "raw": "{\r\n  \"userid\": \"{{PrdtUserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
