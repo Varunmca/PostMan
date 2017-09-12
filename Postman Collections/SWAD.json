@@ -685,6 +685,12 @@
           "response": []
         }
       ]
+    },
+    {
+      "_postman_id": "67491359-1f49-0638-5c2a-f0567fba36a1",
+      "name": "RegisterProduct",
+      "description": "",
+      "item": []
     }
   ]
 }
