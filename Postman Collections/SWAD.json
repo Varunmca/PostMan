@@ -693,7 +693,7 @@
       "item": [
         {
           "_postman_id": "d8d61ae4-1c8a-eebf-ba4c-56d65ab39c85",
-          "name": "RegisterProduct",
+          "name": "RegisterProductUser",
           "event": [
             {
               "listen": "prerequest",
