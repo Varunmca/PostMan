@@ -1167,6 +1167,76 @@
             "description": "This API is sue for login"
           },
           "response": []
+        },
+        {
+          "_postman_id": "ed676014-d2b3-636b-6372-bd32cd5c5fd2",
+          "name": "LoginProductUser_WithInvalidPassword copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "var data = JSON.parse(responseBody);",
+                  "var token_key=data.token",
+                  "postman.setGlobalVariable(\"Token_Key\", token_key);",
+                  "console.log(token_key);",
+                  "",
+                  "pm.test(\"Status code is 200\", function () {",
+                  "    pm.response.to.have.status(200);",
+                  "});",
+                  "",
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  ""
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://192.168.129.155:5000/api/user/login",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "192",
+                "168",
+                "129",
+                "155"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{PrdtUserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
         }
       ]
     }
