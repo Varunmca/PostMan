@@ -733,14 +733,14 @@
             "method": "POST",
             "header": [
               {
-                "description": "",
                 "key": "Content-Type",
-                "value": "application/json"
+                "value": "application/json",
+                "description": ""
               }
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
+              "raw": "{\r\n  \"userid\": \"Varun@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
             },
             "description": "This API is sue for login"
           },
