@@ -977,7 +977,7 @@
         },
         {
           "_postman_id": "1d7d84a4-cd4a-3074-1e0c-fd9593c26f7d",
-          "name": "GetAllUsers copy",
+          "name": "GetAllUsers _WithoutToken",
           "event": [
             {
               "listen": "test",
