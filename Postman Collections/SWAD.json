@@ -1552,7 +1552,7 @@
         },
         {
           "_postman_id": "ab16d076-f302-f6ce-1430-2185addce492",
-          "name": "GetAllProducts copy",
+          "name": "GetAllProducts _WithoutToken",
           "request": {
             "url": "http://192.168.129.143:5000/api//product",
             "method": "GET",
