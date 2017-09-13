@@ -1092,7 +1092,7 @@
         },
         {
           "_postman_id": "6620ae2e-3efd-23c1-5911-87eb4b70681c",
-          "name": "GetProduct",
+          "name": "GetProduct_WithValidUserID",
           "request": {
             "url": "http://192.168.129.143:5000/api//product/varunsinghmca@gmail.com",
             "method": "GET",
