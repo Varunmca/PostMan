@@ -680,7 +680,7 @@
         },
         {
           "_postman_id": "6df823cf-0104-9a19-0ed2-a0ad69110010",
-          "name": "Login_WithoutUserType copy",
+          "name": "Login_WithInvalidUsername",
           "event": [
             {
               "listen": "test",
