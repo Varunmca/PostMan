@@ -1310,7 +1310,7 @@
         },
         {
           "_postman_id": "41981322-047f-fa77-b10c-3f44dd154b40",
-          "name": "LoginProductUser_WithoutPassword copy",
+          "name": "LoginProductUser_WithoutUserType",
           "event": [
             {
               "listen": "test",
