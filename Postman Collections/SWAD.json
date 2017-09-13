@@ -823,7 +823,7 @@
       "item": [
         {
           "_postman_id": "5dce9177-55e8-99c4-2294-1a0ea7808c98",
-          "name": "GetUser",
+          "name": "GetUser_WithValidUserID",
           "event": [
             {
               "listen": "test",
