@@ -604,7 +604,7 @@
         },
         {
           "_postman_id": "948cc384-b215-d802-e7b1-05c4eaef932a",
-          "name": "RegisterProductUser_WithoutLastName copy",
+          "name": "RegisterProductUser_WithoutPassword",
           "event": [
             {
               "listen": "prerequest",
