@@ -740,7 +740,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"Varun@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
+              "raw": "{\r\n  \"userid\": \"Varun@gmail.com\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
