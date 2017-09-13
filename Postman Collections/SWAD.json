@@ -864,7 +864,7 @@
         },
         {
           "_postman_id": "6dc15401-bbf1-053e-6894-018481ecd3b5",
-          "name": "GetUser_InvalidUserID",
+          "name": "GetUser_WithInvalidUserID",
           "event": [
             {
               "listen": "test",
