@@ -764,7 +764,7 @@
                   "});",
                   "var jsonData = pm.response.json();",
                   "pm.test(\"Login  without UserID --\"+jsonData.message, function () {",
-                  "    pm.expect(jsonData.message).to.eql(\"User and password data cannot be empty.\");",
+                  "    pm.expect(jsonData.message).to.eql(\"Password is not matched! Please provide valid Password\");",
                   "});"
                 ]
               }
@@ -808,7 +808,7 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"2324345\",\r\n  \"usertype\": \"\"\r\n}"
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"2324345\",\r\n  \"usertype\": \"user\"\r\n}"
             },
             "description": "This API is sue for login"
           },
