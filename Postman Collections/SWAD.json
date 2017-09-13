@@ -1030,7 +1030,7 @@
         },
         {
           "_postman_id": "b41b7b6e-ba85-440a-ef0f-75a235574598",
-          "name": "LoginFor_ProductUser copy",
+          "name": "LoginProductUser_WithInvalidUserName",
           "event": [
             {
               "listen": "test",
