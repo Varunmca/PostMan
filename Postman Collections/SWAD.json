@@ -1100,7 +1100,7 @@
         },
         {
           "_postman_id": "6c054e25-d82c-9478-ca60-d59b7b495749",
-          "name": "LoginProductUser_WithInvalidUserName copy",
+          "name": "LoginProductUser_WithInvalidPassword",
           "event": [
             {
               "listen": "test",
