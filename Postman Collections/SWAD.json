@@ -677,6 +677,74 @@
             "description": ""
           },
           "response": []
+        },
+        {
+          "_postman_id": "6df823cf-0104-9a19-0ed2-a0ad69110010",
+          "name": "Login_WithoutUserType copy",
+          "event": [
+            {
+              "listen": "test",
+              "script": {
+                "type": "text/javascript",
+                "exec": [
+                  "pm.test(\"Content-Type is present\", function () {",
+                  "    pm.response.to.have.header(\"Content-Type\");",
+                  "});",
+                  "",
+                  "pm.test(\"Response time is less than 200ms\", function () {",
+                  "    pm.expect(pm.response.responseTime).to.be.below(200);",
+                  "});",
+                  "var jsonData = pm.response.json();",
+                  "pm.test(\"Login  without UserID --\"+jsonData.message, function () {",
+                  "    pm.expect(jsonData.message).to.eql(\"User and password data cannot be empty.\");",
+                  "});"
+                ]
+              }
+            }
+          ],
+          "request": {
+            "url": {
+              "raw": "http://192.168.129.143:5000/api/user/login",
+              "protocol": "http",
+              "auth": {},
+              "host": [
+                "192",
+                "168",
+                "129",
+                "143"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "user",
+                "login"
+              ],
+              "query": [
+                {
+                  "description": "",
+                  "equals": true,
+                  "key": "UserID",
+                  "value": "user_ids",
+                  "disabled": true
+                }
+              ],
+              "variable": []
+            },
+            "method": "POST",
+            "header": [
+              {
+                "description": "",
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"userid\": \"{{UserID}}\",\r\n  \"password\": \"123456\",\r\n  \"usertype\": \"\"\r\n}"
+            },
+            "description": "This API is sue for login"
+          },
+          "response": []
         }
       ]
     },
